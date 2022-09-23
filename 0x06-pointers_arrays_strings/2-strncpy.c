@@ -10,7 +10,7 @@
 */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int srcL = 1;
+	int srcL = 0;
 	char *beg = src;
 	char *val = dest;
 	int i;
@@ -21,6 +21,7 @@ char *_strncpy(char *dest, char *src, int n)
 		srcL++;
 		src++;
 	}
+	srcL++;
 
 	if (n > srcL)
 		n = srcL;
